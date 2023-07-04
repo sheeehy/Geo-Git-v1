@@ -11,7 +11,7 @@ function setLoading(isLoading) {
 async function getUsersByLocation(location) {
     const url = `https://api.github.com/search/users?q=location:${location}&per_page=10`;
     const headers = {
-      'Authorization': 'Bearer ' + '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'
+      'Authorization': 'Bearer ' + 'XXX'
     };
 
     let response = await fetch(url, { headers });
@@ -22,7 +22,7 @@ async function getUsersByLocation(location) {
 async function getUserDetails(username) {
     const url = `https://api.github.com/users/${username}`;
     const headers = {
-        'Authorization': 'Bearer ' + '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'
+        'Authorization': 'Bearer ' + 'XXX'
     };
 
     let response = await fetch(url, { headers });
@@ -47,10 +47,7 @@ async function getTopUsers() {
     }
 
     users.sort((a, b) => b.followers - a.followers);
-
-    // Get only the top 10 users
     users = users.slice(0, 10);
-
     let output = '<table><tr><th>Rank</th><th>Name</th><th>Followers</th><th>Repositories</th><th></th></tr>';
     for (let i = 0; i < users.length; i++) {
         let user = users[i];
@@ -71,8 +68,3 @@ async function getTopUsers() {
 
 
 document.getElementById('getUsers').addEventListener('click', getTopUsers);
-
-
-
-
-    // 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
