@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GeoGit.</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="assets/geogit.png" type="image/png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope&family=Maven+Pro&family=Quicksand&family=Raleway:ital,wght@0,700;1,500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+        </div>
+        <div class="nav-btn">
+            <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">home</a>
+            <a href="search.html">search</a>
+            <a href="howitworks.html"">how it works</a>
+
+        </div>
+    </div>
+
+    <div class=" content">
+                <img class="githubicon" src="assets/geogit.png" alt="Image">
+                <div class="container">
+                    <h2>Find the top GitHub talent by location.</h2>
+                    <div class="search-container">
+                        <p class="search-text">
+                            Try locations worldwide, from countries, cities and states, or try somewhere closer to home.
+                        </p>
+                    </div>
+                    <style>
+                        input[type="search"]::-webkit-search-cancel-button {
+                            display: none;
+                        }
+                        button {
+                            color: black;
+                        }
+                    </style>
+
+                    <form onsubmit="event.preventDefault(); getTopUsers();" role="search">
+                        <input id="location" type="search" placeholder="Location" autofocus required>
+                        <button type="button" onclick="getTopUsers();">Go</button>
+                    </form>
+                    <ul id="user-list"></ul>
+                </div>
+
+        </div>
+
+        <footer>
+            <a href="https://github.com/sheeehy" target="_blank" rel="">Designed & Built by Jack Sheehy :) <br>
+                ©2023</a>
+        </footer>
+
+        <script src="main.js"></script>
+</body>
+
+</html>
