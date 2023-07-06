@@ -38,7 +38,7 @@
     <div class=" content">
                 <img class="githubicon" src="assets/geogit.png" alt="Image">
                 <div class="container">
-                    <h2>Find the top GitHub talent by location.</h2>
+                    <h2>Rank the top GitHub talent by location.</h2>
                     <div class="search-container">
                         <p class="search-text">
                             Try locations worldwide, from countries, cities and states, or try somewhere closer to home.
@@ -48,23 +48,25 @@
                         input[type="search"]::-webkit-search-cancel-button {
                             display: none;
                         }
+
                         button {
                             color: black;
                         }
                     </style>
 
                     <form onsubmit="event.preventDefault(); getTopUsers();" role="search">
-                        <input id="location" type="search" placeholder="Location" autofocus required>
-                        <button type="button" onclick="getTopUsers();">Go</button>
+                        <input id="location" type="search" placeholder="Location" autofocus required autocomplete="off">
+                        <button class="go" type="button" onclick="getTopUsers();">Go</button>
                     </form>
+
                     <ul id="user-list"></ul>
                 </div>
 
         </div>
 
         <footer>
-            <a href="https://github.com/sheeehy" target="_blank" rel="">Designed & Built by Jack Sheehy :) <br>
-                ©2023</a>
+            <a href="https://github.com/sheeehy" target="_blank" rel="">Jack Sheehy :) <br>  ©2023</a>
+
         </footer>
 
         <script src="main.js"></script>
